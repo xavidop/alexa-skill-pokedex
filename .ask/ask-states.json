@@ -1,0 +1,30 @@
+{
+  "askcliStatesVersion": "2020-03-31",
+  "profiles": {
+    "default": {
+      "skillInfrastructure": {
+        "@ask-cli/lambda-deployer": {
+          "deployState": {
+            "default": {
+              "lambda": {
+                "arn": "arn:aws:lambda:us-east-1:141568529918:function:ask-alexa-skill-pokedex-default-default-1603910397721",
+                "lastModified": "2020-11-04T19:36:10.683+0000",
+                "revisionId": "49c2e70e-e16b-4f3b-b1b9-6b7184cd85d2"
+              },
+              "iamRole": "arn:aws:iam::141568529918:role/ask-lambda-alexa-skill-pokedex-1603910388078"
+            }
+          }
+        }
+      },
+      "skillId": "amzn1.ask.skill.2ecb90c4-21cc-48ef-a2f5-da36465d3004",
+      "skillMetadata": {
+        "lastDeployHash": "Px/r9ADmUdGdQB0esKAY6zr4hOw="
+      },
+      "code": {
+        "default": {
+          "lastDeployHash": "tee0mMiThjyM62wpqsRM9LTImYk="
+        }
+      }
+    }
+  }
+}

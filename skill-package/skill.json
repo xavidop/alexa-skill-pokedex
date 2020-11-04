@@ -1,0 +1,36 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Sample Short Description",
+          "examplePhrases": [
+            "Alexa open poke dex"
+          ],
+          "name": "alexa-skill-pokedex",
+          "description": "Sample Full Description"
+        },
+        "es-ES": {
+          "summary": "Ejemplo corto de descripción",
+          "examplePhrases": [
+            "Alexa abre poke dex"
+          ],
+          "name": "alexa-skill-pokedex",
+          "description": "Sample Full Description"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:141568529918:function:ask-alexa-skill-pokedex-default-default-1603910397721"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
