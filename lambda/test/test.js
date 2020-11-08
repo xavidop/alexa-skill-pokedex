@@ -24,6 +24,15 @@ const alexaTest = new test.AlexaTest(skillHandler, skillSettings);
 
 describe('Pokedex Suite', function() {
 
+  describe('LaunchRequest', function() {
+    alexaTest.test([
+        {
+          request: new test.LaunchRequestBuilder(skillSettings).build(),
+          saysLike: i18n.t('WELCOME_MSG'), repromptsNothing: false, shouldEndSession: false,
+        },
+    ]);
+  });
+
   describe('AMAZON.HelpIntent', function() {
     alexaTest.test([
       {
