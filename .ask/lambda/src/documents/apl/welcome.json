@@ -1,0 +1,71 @@
+{
+    "type": "APL",
+    "version": "1.4",
+    "settings": {},
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.2.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "item": [
+            {
+                "type": "Container",
+                "height": "100vh",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "${payload.background.image.url}",
+                        "backgroundAlign": "center",
+                        "colorOverlay": true,
+                        "backgroundScale": "best-fill",
+                        "backgroundBlur": false
+                    },
+                    {
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "AlexaHeader",
+                                "headerTitle": "${payload.header.title}",
+                                "headerAttributionImage": "${payload.header.logo.url}"
+                            },
+                            {
+                                "type": "Container",
+                                "width": "100%",
+                                "height": "70%",
+                                "justifyContent": "start",
+                                "alignItems": "center",
+                                "paddingLeft": "@marginHorizontal",
+                                "paddingRight": "@marginHorizontal",
+                                "items": [
+                                    {
+                                        "type": "AlexaImage",
+                                        "grow": "${@viewportProfile == @hubRoundSmall ? 0 : 1}",
+                                        "imageSource": "${payload.image.url}",
+                                        "imageRoundedCorner": true,
+                                        "imageScale": "best-fill",
+                                        "imageAlignment": "center",
+                                        "imageWidth": "${@viewportProfile == @hubRoundSmall ? '70%' : '100%'}",
+                                        "imageAspectRatio": "${@viewportProfile == @hubRoundSmall ? 'square' : 'standard_landscape'}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

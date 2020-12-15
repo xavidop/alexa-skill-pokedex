@@ -1,10 +1,13 @@
 {
-  "name": "curiosidades-del-ajolote",
+  "name": "pokedex",
   "version": "1.1.0",
   "description": "Alexa Skill example with NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "copy-package": "cpy package.json src/",
+    "build": "npm run copy-package && cd src/ && npm run build-production",
+    "build-production": "npm install --production",
+    "test": "mocha test/**/*.js --reporter mochawesome"
   },
   "author": "La revolución de Alexa",
   "license": "ISC",
@@ -14,5 +17,12 @@
     "aws-sdk": "^2.326.0",
     "i18next": "^15.0.5",
     "axios": "0.21.0"
+  },
+  "devDependencies": {
+    "ask-sdk-test": "^2.5.0",
+    "chai": "^4.2.0",
+    "cpy-cli": "^3.1.1",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1"
   }
 }

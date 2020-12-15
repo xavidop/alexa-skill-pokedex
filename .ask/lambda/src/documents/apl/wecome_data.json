@@ -1,0 +1,16 @@
+{
+    "background": {
+        "image": {
+            "url": "https://st2.depositphotos.com/3213441/12022/v/950/depositphotos_120226446-stock-illustration-pokemon-go-pokeball-seamless-texture.jpg"
+        }
+    },
+    "header": {
+        "title": "Pokedex",
+        "logo": {
+            "url": "https://alexa-skill-pokedex.s3.amazonaws.com/images/logo.png"
+        }
+    },
+    "image": {
+        "url": "https://alexa-skill-pokedex.s3.amazonaws.com/images/welcome.png"
+    }
+}

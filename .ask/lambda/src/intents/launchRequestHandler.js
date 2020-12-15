@@ -4,6 +4,7 @@ const Alexa = require('ask-sdk-core');
 const i18n = require('i18next');
 const welcome_document = require('../documents/apla/text_audio_background.json'); 
 const APL_TOKEN = 'welcome_token';
+const USER_ID_MOCK = 'amzn1.ask.account.VOID'
 
 module.exports = {
   LaunchRequestHandler: {
@@ -11,6 +12,10 @@ module.exports = {
       return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
+
+      let { requestEnvelope } = handlerInput;
+      let userID = Alexa.getUserId(requestEnvelope);
+
       const speakOutput = i18n.t('WELCOME_MSG');
 
       const welcome_audio_arr = welcome_audios;
@@ -24,6 +29,13 @@ module.exports = {
         }
       }
       
+      if(userID === USER_ID_MOCK){
+        return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .reprompt(speakOutput)
+        .getResponse();
+      }
+
       handlerInput.responseBuilder.addDirective({
         type: 'Alexa.Presentation.APLA.RenderDocument',
         document: welcome_document,
