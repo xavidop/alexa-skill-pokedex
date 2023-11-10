@@ -16,7 +16,7 @@
     "ask-sdk-model": "^1.33.0",
     "aws-sdk": "^2.326.0",
     "i18next": "^15.0.5",
-    "axios": "0.21.0"
+    "axios": "1.6.0"
   },
   "devDependencies": {
     "ask-sdk-test": "^2.5.0",
